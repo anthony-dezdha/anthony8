@@ -101,10 +101,12 @@ def find_word(s, hash_table):
     post: Returns True if s is found in hash_table, otherwise returns False.
     """
     key = hash_word(s, len(hash_table))
-    if hash_table[key] == s:
-        return True
-    else:
-        return s in hash_table
+    step = step_size(s)
+    while hash_table[key] != "":
+        if hash_table[key] == s:
+            return True
+        key = (key + step) % len(hash_table)
+    return False
 
 # TODO: Modify this function. You may delete this comment when you are done.
 def is_reducible(s, hash_table, hash_memo):
