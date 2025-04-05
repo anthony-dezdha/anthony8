@@ -15,7 +15,7 @@ Students. Academic penalties up to and including an F in the course are likely.
 UT EID 1: Sm76875
 UT EID 2: Ad54489
 """
-
+import sys
 # the constant used to calculate the step size
 STEP_SIZE_CONSTANT = 3
 
@@ -210,8 +210,8 @@ def main():
         for reducible_word in sorted(longred):
             print(reducible_word)
     except BrokenPipeError:
-    # If the output pipe is closed, just exit gracefully.
         pass
+
 
 
 if __name__ == "__main__":
