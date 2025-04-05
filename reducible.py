@@ -207,11 +207,11 @@ def main():
     # print the reducible words in alphabetical order
     # one word per line
     try:
-    for reducible_word in sorted(longred):
-        print(reducible_word)
+        for reducible_word in sorted(longred):
+            print(reducible_word)
     except BrokenPipeError:
     # If the output pipe is closed, just exit gracefully.
-    pass
+        pass
 
 
 if __name__ == "__main__":
